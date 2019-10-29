@@ -1,3 +1,5 @@
+package FieldGame;
+
 public class Terning {
 
     private final int MAX = 6;
