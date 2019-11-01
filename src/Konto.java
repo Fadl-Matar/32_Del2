@@ -1,26 +1,23 @@
 import java.util.Scanner;
 
 public class Konto {
-    private Spiller spillerscore = new Spiller();
-    private int pengebeholdning;
-    private boolean inGame = true;
-    private Scanner scanner = new Scanner(System.in);
 
-    public Konto(int pengebeholdning) {
-        this.pengebeholdning = 1000;
-    }
+    private int beløb;
 
     public Konto() {
-        spillerscore = new Spiller();
+        this.beløb = 1000;
     }
-
-    public boolean isInGame() {
-        return inGame;
+    public int getBeløb() {
+        return beløb;
     }
-    public int getPengebeholdning() {
-        return pengebeholdning;
-
+    public void indsæt(int indsætBeløb) {
+        beløb += indsætBeløb;
     }
-
-
+    public void træk(int trækBeløb) {
+        if (beløb - trækBeløb < 0) {
+            System.out.println("Beløb på " + beløb + " transaktion kan ikke gennemføres");
+        } else {
+            beløb -= trækBeløb;
+        }
+    }
 }

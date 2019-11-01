@@ -7,7 +7,7 @@ public class Terning {
         this.faceValue = faceValue;
     }
     public int roll() {
-        faceValue = (int) Math.random() * MAX + 1;
+        faceValue = (int) (Math.random() * MAX) + 1;
         return faceValue;
     }
 }
